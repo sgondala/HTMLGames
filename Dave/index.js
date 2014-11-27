@@ -7,18 +7,18 @@ function preload() {
     game.load.image('unit','floor.png');
     game.load.image('keyImage','red.jpg');
     game.load.image('doorImage','brown.jpg');
-    game.load.image('collector','voilet.jpg');
+
 }
 
 
 var dave;
-var powers;
 var floor;
 var key;
 var Level1Key;
 var score = 0;
 var scoreText;
 var door;
+var initialOne;
 
 function create() {     // Bug at left and right corner
     dave = game.add.sprite(200,200,'dave');
@@ -30,10 +30,6 @@ function create() {     // Bug at left and right corner
     floor=game.add.group();
     floor.enableBody = true;
     
-    /*
-    points=game.add.group();
-    points.enableBody=true;
-    game.add.sprite(100,100,'collector'); */
     
     game.physics.arcade.enable(floor);
     key = game.add.sprite(11*50,3*50,'keyImage');
@@ -77,6 +73,8 @@ function create() {     // Bug at left and right corner
 
     //Score
     scoreText = game.add.text(50, 0, 'Score: 0', { fontSize: '32px', fill: '#FFF' });
+    
+    game.physics.arcade.enable(temp);
     
 }
 
