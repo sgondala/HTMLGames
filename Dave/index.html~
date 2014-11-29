@@ -6,7 +6,7 @@
     <title> Dangerous Dave - 2014 </title>
 
     <script type="text/javascript" src="phaser.min.js"></script>
-    <script type="text/javascript" src="indexState.js"></script>
+    <script type="text/javascript" src="withoutGems.js"></script>
 </head>
 
 <body>
